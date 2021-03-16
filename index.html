@@ -16,19 +16,135 @@
 
 	<body>					<!--Cuerpo del sitio. Visible por el navegador-->
 
-		<header></header>	<!--Cabecera de la página, puede llevar logo, redes sociales, titulo, etc.-->
+		<header>Cabecera</header>	<!--Cabecera de la página, puede llevar logo, redes sociales, titulo, etc.-->
 
-		<nav></nav>			<!--Barra de navegación.-->
+		<nav>Barra de navegación</nav>			<!--Barra de navegación.-->
 
-		<section></section>		<!--Seccion del sitio-->
+		<section>Sección principal</section>		<!--Sección del sitio-->
 
-		<aside></aside>		<!--Identificar columnas-->
+		<aside>Columna</aside>		<!--Identificar columnas-->
 
-		<article></article>		<!--Para escribir artículos-->
+		<article>Artículo</article>		<!--Para escribir artículos-->
 
-		<h1></h1>		<!--Para títulos-->
+		<h1>Título</h1>		<!--Para títulos-->
+		<h2>Título</h2>
+		<h3>Título</h3>
+		<h4>Título</h4>
+		<h5>Título</h5>
+		<h6>Título</h6>
 
-		<p></p>			<!--Para párrafos-->
+		<p>Parrafo</p>			<!--Para párrafos-->
+		<p>Palabra en <b>negritas</b> y con un <br>salto de línea</p>
+
+		<hr>		<!--Línea divisora-->
+
+		<a href="img/magdalenaGrande.png">Esto es un link con referencia a una imágen</a>.		<!--Para poner links se debe poner la referencia.-->
+
+		<figure>			<!--Ayuda a estructurar mejor para la maquetación-->
+			<img src="img/magdalenaGrande.png">		<!--Para poner una imágen-->
+		</figure>
+		<figcaption>Pie de imágen.</figcaption>		<!--Pie de imágen-->
+
+		<ol>			<!--Para crear una lista organizada-->
+			<li>Pastel</li>
+			<li>Pan</li>
+			<li>Dulces</li>
+		</ol>
+
+		<ul>			<!--Para crear una lista no numérica-->
+			<li>Pastel</li>
+			<li>Pan</li>
+			<li>Dulces</li>
+		</ul>
+
+		<table border="1"> 		<!--Crear una tabla-->
+			<thead>			<!--Cabecera de la tabla-->
+				<tr>		<!--Crear una fila-->
+					<th>Mes</th>	<!--Crear columnas-->
+					<th>Año</th>
+					<th>Ahorro</th>
+				</tr>
+			</thead>
+
+			<tbody>		<!--Cuerpo de la tabla-->
+				<tr>
+					<td>Enero</td>
+					<td>2020</td>
+					<td>$200</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h1>RESULTADOS DE VENTAS</h1>
+		<p>Enero: <meter value="90" min="0" max="100" high="50"></meter></p>		<!--Indicadores de medidas valor/mínimo/máximo/puntaje más alto a partir de-->
+		<p>Febrero: <meter value="50" min="0" max="100" high="50"></meter></p>
+		<p>Marzo: <meter value="30" min="0" max="100" high="50"></meter></p>
+
+		<h1>RESULTADOS DE VENTAS CON PROGRESS</h1>
+		<p>Enero: <progress value="90" min="0" max="100"></progress></p>
+		<p>Febrero: <progress value="50" min="0" max="100"></progress></p>
+		<p>Marzo: <progress value="30" min="0" max="100"></progress></p>
+
+		<audio autoplay controls loop preload="metadata">			<!--Insertar un audio, los atributos son booleanos/preload para saber cuando se va a cargar el arcivo-->
+			<source src="audio/prueba.m4a" type="audio/mp4">
+			<source src="audio/prueba.mp3" type="audio/mp3">
+			<source src="audio/prueba.ogg" type="audio/ogg">
+		</audio>						<!--Buenas prácticas: Tener el archivo en los formatos .ogg .mp3 .m4a-->
+
+		<video autoplay controls loop width="500" height="200" preload="metadata">
+			<source src="video/prueba.mp4" type="video/mp4">
+			<source src="video/prueba.ogv" type="video/ogg">
+			<source src="video/prueba.webm" type="video/webm">
+		</video>	<!--Buenas prácticas: Tener el archivo en los formatos .ogg .mp4 .webm-->
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/FANH5QhtLsw" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen>
+		</iframe>		<!--Insertar video de youtube o cualquier link embebido a partir de iframe-->
+
+		<center>
+			<h3>FORMULARIO</h3>
+			<form>		<!--Insertar un formulario-->
+
+				<label for="texto"> Entrada de texto: </label>
+				<input id="texto" type="text" placeholder="Entrada de texto" value="" required>
+				<br>
+				<br>
+				<label for="correo"> Entrada de correo: </label>
+				<input id="correo" type="correo" placeholder="Entrada de correo" value="">
+				<br>
+				<br>
+				<label for="pass"> Entrada de contraseña: </label>
+				<input id="pass" type="password" placeholder="Entrada de contraseña" value="">
+				<br>
+				<br>
+				<label for="edad"> Entrada de edad: </label>
+				<input id="edad" type="number" value="20" min="20" max="50">
+				<br>
+				<br>
+				<select>
+					<option>Opcion 1</option>
+					<option>Opcion 2</option>
+					<option>Opcion 3</option>
+				</select>
+				<br>
+				<br>
+				<input id="amarillo" type="checkbox"><label for="amarillo">Amarillo</label>
+				<input id="azul" type="checkbox"><label for="azul">Azul</label>
+				<input id="verde" type="checkbox"><label for="verde">Verde</label>
+				<br>
+				<br>
+				<input id="blanco" type="radio" name="grupo1" checked><label for="blanco">Blanco</label>
+				<input id="morado" type="radio" name="grupo1"><label for="morado">Morado</label>
+				<input id="rosa" type="radio" name="grupo1"><label for="rosa">Rosa</label>
+				<br>
+				<br>
+				<input type="submit" value="Enviar">
+			</form>
+		</center>
+
+		<footer>Este es el pie de página</footer>		<!--Pie de página-->
 
 	</body>
+
 </html>
